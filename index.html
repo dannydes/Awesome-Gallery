@@ -8,6 +8,10 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <link rel="stylesheet" href="stylesheets/awesome-gallery.css" />
+    <style>
+    .mainPhoto{transform:skew(-10deg) rotate3d(0,1,0,90deg);-webkit-transform:skew(-10deg) rotate3d(0,1,0,90deg)}.mainPhoto.view{transform:rotate3d(0,0,0,0);-webkit-transform:rotate3d(0,0,0,0)}
+    </style>
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -34,6 +38,33 @@
 <p>This project has initially started as a simple experiment with jQuery and its effects module, when I first started mastering jQuery about 2 years ago. Later on that year, I have <a href="https://developer.mozilla.org/en-US/demos/detail/responsive-galleries">participated</a> in an MDN challenge on CSS media queries, when I have attempted to optimize the layout for a few screen sizes, which I did not really do well at. However, my friends liked it since, it featured a number of photo transition effects (this time using CSS3), as well as cool geo-tagging and photo capture through your <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator.getUserMedia">web cam</a> or <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/Camera">mobile camera</a>. All of this was done using open web technologies!</p>
 
 <p>Last summer, I have been selected for an internship at the ICT Faculty of the <a href="http://www.um.edu.mt">University of Malta</a>, where I have been assigned a website, in which, I have embedded an improved version of the same gallery and my boss liked it. My co-worker was impressed too! It is still a work in progress, needing fixes, testing and porting over old fancy features through plugins, so I would appreciate if you file an issue or send a pull request.</p>
+
+    <div class="container" id="gallery">
+      <a id="fullScreenButton" class="galleryNavButton">Fullscreen</a>
+
+      <div class="photoStrip">
+        <img class="photo" src="https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-prn1/524265_442728492500806_1762015287_n.jpg" alt="Pupu :3" />
+        <img class="photo" src="https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-frc3/1044733_3313993386247_679963066_n.jpg" alt="Firefox OS!" />
+        <img class="photo" src="https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-prn2/1376593_3675979475673_374240229_n.jpg" alt="Why so cute, Foxkeh?" />
+      </div>
+
+      <div class="controls">
+        <a id="prev" class="control">
+          <span>&lt;</span>
+        </a>
+        <a id="next" class="control">
+          <span>&gt;</span>
+        </a>      
+      </div>
+
+      <figure id="photoFrame" class="photoFrame">
+        <figcaption class="caption printable">
+          <span id="description"></span>
+          <span id="distance"></span>
+        </figcaption>
+        <img class="printable view mainPhoto" id="mainPhoto" />
+      </figure>
+    </div>
         </section>
 
         <aside id="sidebar">
@@ -53,6 +84,9 @@
       </div>
     </div>
 
-  
+    <script src="https://github.com/dannydes/Awesome-Gallery/releases/download/0.5(Christmas2)/awesome-gallery.min.js"></script>
+    <script src="https://github.com/dannydes/Awesome-Gallery/releases/download/Fullscreen0.1/fullscreen.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <script src="https://github.com/dannydes/Awesome-Gallery/releases/download/XmaxyPlugin0.1.1/xmaxy.min.js"></script>
   </body>
 </html>
